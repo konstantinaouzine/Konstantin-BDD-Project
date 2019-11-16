@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Nov 16 22:32:04 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>55 seconds (55213 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='RunTest.scenario()'><b>scenario</b><br>Test class: RunTest<br>Test method: Runs Cucumber Feature<br>Parameters: "Successful login", "Login Profile"<br/>
+<a href="#Output-1419125235" onClick='toggleBox("Output-1419125235", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1419125235" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1419125235">
+<div "result">I am on the login page (PASSED : 9s)</div><br/>
+<div "result">I should see login fields (PASSED : 0s)</div><br/>
+<div "result">I stay on login page (PASSED : 0s)</div><br/>
+<div "result">I fill in &quot;Username&quot; with &quot;mngr233239&quot; (PASSED : 2s)</div><br/>
+<div "result">I fill in &quot;Password&quot; with &quot;dUhAnAd&quot; (PASSED : 2s)</div><br/>
+<div "result">I click on the LogIn button (PASSED : 1s)</div><br/>
+<div "result">I am on the MyProfile page on URL &quot;http:&#x2F;&#x2F;demo.guru99.com&#x2F;V1&#x2F;html&#x2F;Managerhomepage.php&quot; (PASSED : 0s)</div><br/>
+<div "result">I should see the LogOut button (PASSED : 0s)</div><br/>
+<div "result">I close the browser (PASSED : 0s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>RunTest@4590c9c3</td></tr>
+<tr>
+<td title='RunTest.scenario()'><b>scenario</b><br>Test class: RunTest<br>Test method: Runs Cucumber Feature<br>Parameters: "Failed login using wrong credentials", "Login Profile"<br/>
+<a href="#Output-848958019" onClick='toggleBox("Output-848958019", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-848958019" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-848958019">
+<div "result">I am on the login page (PASSED : 8s)</div><br/>
+<div "result">I should see login fields (PASSED : 0s)</div><br/>
+<div "result">I stay on login page (PASSED : 0s)</div><br/>
+<div "result">I fill in &quot;Username&quot; with &quot;mngr233239&quot; (PASSED : 2s)</div><br/>
+<div "result">I fill in &quot;Password&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div><br/>
+<div "result">I click on the LogIn button (PASSED : 0s)</div><br/>
+<div "result">I should get Error screen (PASSED : 2s)</div><br/>
+<div "result">I close the browser (PASSED : 4s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>RunTest@4590c9c3</td></tr>
+<tr>
+<td title='RunTest.scenario()'><b>scenario</b><br>Test class: RunTest<br>Test method: Runs Cucumber Feature<br>Parameters: "Failed login using wrong credentials", "Login Profile"<br/>
+<a href="#Output-1075082007" onClick='toggleBox("Output-1075082007", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1075082007" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1075082007">
+<div "result">I am on the login page (PASSED : 8s)</div><br/>
+<div "result">I should see login fields (PASSED : 0s)</div><br/>
+<div "result">I stay on login page (PASSED : 0s)</div><br/>
+<div "result">I fill in &quot;Username&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div><br/>
+<div "result">I fill in &quot;Password&quot; with &quot;dUhAnAd&quot; (PASSED : 2s)</div><br/>
+<div "result">I click on the LogIn button (PASSED : 0s)</div><br/>
+<div "result">I should get Error screen (PASSED : 2s)</div><br/>
+<div "result">I close the browser (PASSED : 4s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>RunTest@4590c9c3</td></tr>
+</table><p>
+</body>
+</html>

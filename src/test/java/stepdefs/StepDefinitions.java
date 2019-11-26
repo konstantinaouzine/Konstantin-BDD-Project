@@ -10,14 +10,11 @@ import pageobjects.BasePage;
 
 public class StepDefinitions {
 
-    private BankLoginPage bankLoginPage = new BankLoginPage();
+    private BankLoginPage bankLoginPage;
 
-    public StepDefinitions() {
-    }
-
-    /*public StepDefinitions(BankLoginPage bankLoginPage) {
+    public StepDefinitions(BankLoginPage bankLoginPage) {
         this.bankLoginPage = bankLoginPage;
-    }*/
+    }
 
     @Given("^I am on the login page$")
     public void i_am_on_the_login_page() {

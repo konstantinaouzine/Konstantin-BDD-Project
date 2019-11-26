@@ -21,7 +21,7 @@ public class RunTest {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)
-    public void setUpClass() throws Exception {
+    public void setUpClass() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
@@ -35,8 +35,17 @@ public class RunTest {
         return testNGCucumberRunner.provideScenarios();
     }
 
+    @AfterMethod(alwaysRun = true)
+    public void tearDownMethod() {
+        System.out.println("Method tear down executed");
+        try{
+            BasePage.getDriver().close();
+        }catch(Exception e){
+            System.out.println("Driver closure failed");
+        }
+    }
     @AfterClass(alwaysRun = true)
-    public void tearDownClass() throws Exception {
+    public void tearDownClass() {
         testNGCucumberRunner.finish();
     }
 }

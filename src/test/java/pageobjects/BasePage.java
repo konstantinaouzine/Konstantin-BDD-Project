@@ -1,6 +1,5 @@
 package pageobjects;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,7 @@ import java.util.logging.Logger;
 
 public abstract class BasePage {
 
-    static WebDriver driver;
+    static protected WebDriver driver;
 
     protected String pageTitle;
 
@@ -28,7 +27,6 @@ public abstract class BasePage {
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
     }
 
     public String getPageTitle(){

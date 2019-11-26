@@ -18,10 +18,7 @@ public abstract class BasePage {
     private static Logger log = Logger.getLogger(BasePage.class.getName());
 
     BasePage(){
-        //78.0.3904.105
         WebDriverManager.chromedriver().version("78.0.3904.105").setup();
-        //ChromeDriverManager.getInstance().setup();
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\konstantin\\Documents\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");

@@ -1,6 +1,5 @@
 package pageobjects;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,17 +10,14 @@ import java.util.logging.Logger;
 
 public abstract class BasePage {
 
-    static WebDriver driver;
+    static protected WebDriver driver;
 
     protected String pageTitle;
 
     private static Logger log = Logger.getLogger(BasePage.class.getName());
 
     BasePage(){
-        //78.0.3904.105
         WebDriverManager.chromedriver().version("78.0.3904.105").setup();
-        //ChromeDriverManager.getInstance().setup();
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\konstantin\\Documents\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
@@ -31,7 +27,6 @@ public abstract class BasePage {
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
     }
 
     public String getPageTitle(){

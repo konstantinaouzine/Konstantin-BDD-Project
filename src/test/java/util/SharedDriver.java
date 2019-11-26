@@ -32,6 +32,10 @@ import java.net.URL;*/
  * A new instance of the SharedDriver is created for each Scenario and then passed to the Step Definition classes'
  * constructor. They all receive a reference to the same instance. However, the REAL_DRIVER is the same instance throughout * the life of the JVM. * </p>
  */
+
+public class SharedDriver{
+
+}
 /*
 public class SharedDriver extends EventFiringWebDriver implements En {
     private static final WebDriver REAL_DRIVER;
@@ -90,7 +94,6 @@ public class SharedDriver extends EventFiringWebDriver implements En {
                 options.addArguments("--start-maximized");
                 options.addArguments("--disable-notifications");
                 desiredBrowser = new ChromeDriver(options);
-                System.out.println("DADADA");
                 break;
             case "firefox":
                 FirefoxDriverManager.getInstance().setup();
@@ -103,6 +106,3 @@ public class SharedDriver extends EventFiringWebDriver implements En {
         return desiredBrowser;
     }
 }*/
-
-
-public class SharedDriver{}

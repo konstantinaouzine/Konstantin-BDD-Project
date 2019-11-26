@@ -14,7 +14,6 @@ Feature: Login Profile
     And I click on the LogIn button
     Then I am on the MyProfile page on URL "http://demo.guru99.com/V1/html/Managerhomepage.php"
     And I should see the LogOut button
-    And I close the browser
 
   Scenario Outline: Failed login using wrong credentials
     Given I stay on login page
@@ -22,7 +21,6 @@ Feature: Login Profile
     And I fill in "Password" with "<password>"
     And I click on the LogIn button
     Then I should get Error screen
-    And I close the browser
     Examples:
       | username          | password  |
       | mngr233239        | Incorrect |

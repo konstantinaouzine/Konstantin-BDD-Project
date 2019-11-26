@@ -1,6 +1,7 @@
 package pageobjects;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,15 +18,19 @@ public abstract class BasePage {
     private static Logger log = Logger.getLogger(BasePage.class.getName());
 
     BasePage(){
-        ChromeDriverManager.getInstance().setup();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ayzin\\Desktop\\Selenium\\chromedriver.exe");
+        //78.0.3904.105
+        WebDriverManager.chromedriver().version("78.0.3904.105").setup();
+        //ChromeDriverManager.getInstance().setup();
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\konstantin\\Documents\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
-        this.driver = new ChromeDriver(options);
-        this.driver = driver;
-        this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        this.driver.manage().window().maximize();
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-browser-side-navigation");
+        options.addArguments("--disable-gpu");
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
     }
 

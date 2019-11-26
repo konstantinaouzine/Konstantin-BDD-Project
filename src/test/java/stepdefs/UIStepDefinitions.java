@@ -8,11 +8,11 @@ import org.testng.Assert;
 import pageobjects.BankLoginPage;
 import pageobjects.BasePage;
 
-public class StepDefinitions {
+public class UIStepDefinitions {
 
     private BankLoginPage bankLoginPage;
 
-    public StepDefinitions(BankLoginPage bankLoginPage) {
+    public UIStepDefinitions(BankLoginPage bankLoginPage) {
         this.bankLoginPage = bankLoginPage;
     }
 

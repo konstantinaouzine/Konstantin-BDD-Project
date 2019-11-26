@@ -13,7 +13,7 @@ import pageobjects.BasePage;
         glue = {"stepdefs"},
         tags = {"not @Ignore"},
         dryRun = false,
-        strict = true
+        strict = false
         )
 
 

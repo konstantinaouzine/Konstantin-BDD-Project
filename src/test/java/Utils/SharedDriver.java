@@ -1,4 +1,4 @@
-package util;
+package Utils;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;

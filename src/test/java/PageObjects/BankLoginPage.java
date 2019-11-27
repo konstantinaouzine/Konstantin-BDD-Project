@@ -1,13 +1,9 @@
-package pageobjects;
+package PageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import util.SharedDriver;
-
-import java.time.Duration;
+import Utils.SharedDriver;
 
 
 public class BankLoginPage extends BasePage{

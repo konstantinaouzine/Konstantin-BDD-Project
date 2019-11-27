@@ -1,13 +1,9 @@
-package pageobjects;
+package PageObjects;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import util.SharedDriver;
+import Utils.SharedDriver;
 
 import java.util.concurrent.TimeUnit;
-//import java.util.logging.Logger;
+//import java.Utils.logging.Logger;
 
 public abstract class BasePage {
 

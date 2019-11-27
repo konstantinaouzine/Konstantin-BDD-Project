@@ -1,14 +1,12 @@
-package stepdefs;
+package StepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import pageobjects.BankLoginPage;
-import pageobjects.BasePage;
-import util.SharedDriver;
+import PageObjects.BankLoginPage;
+import Utils.SharedDriver;
 
 public class UIStepDefinitions {
 

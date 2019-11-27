@@ -6,12 +6,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;*/
 import org.testng.annotations.*;
-import pageobjects.BasePage;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"stepdefs"},
-        tags = {"not @Ignore"},
+        glue = {"StepDefinitions"},
+        tags = "not @Ignore",
         dryRun = false,
         strict = false
         )

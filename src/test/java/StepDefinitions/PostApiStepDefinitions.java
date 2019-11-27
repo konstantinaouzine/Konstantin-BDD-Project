@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import ApiObjects.Category;
 import ApiObjects.Pet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -9,6 +10,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+
+import static io.restassured.RestAssured.given;
 
 public class PostApiStepDefinitions {
     private StepData stepData;
@@ -26,6 +29,11 @@ public class PostApiStepDefinitions {
             .given().contentType("application/json");
     }
 
+    @Then("^be happy$")
+    public void beHappy() throws Throwable {
+        System.out.println("Background executed");
+    }
+//-----------------------------------------------------------------------------------------------
     @Given("^a pet with id (\\d+)$")
     public void aPetWithId(int arg0) throws Throwable {
         //Building Pet
@@ -50,20 +58,38 @@ public class PostApiStepDefinitions {
     @And("^pet successfully added$")
     public void petSuccessfullyAdded() throws Throwable {
         Pet response_Pet = stepData.response.body().as(Pet.class);
-        boolean result = (
-                response_Pet.getId() == request_Pet.getId() &&
-                response_Pet.getName().equals(request_Pet.getName()) &&
-                response_Pet.getStatus().equals(request_Pet.getStatus()) &&
-                response_Pet.getCategory() == response_Pet.getCategory() &&
-                response_Pet.getPhotoUrls() == request_Pet.getPhotoUrls() &&
-                response_Pet.getTags() == request_Pet.getTags());
+        boolean result = (request_Pet.equals(response_Pet));
         Assert.assertTrue(result);
     }
 
     @Given("^a pet with \"([^\"]*)\" set with \"([^\"]*)\"$")
     public void aPetWithSetWith(String arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        switch(arg0){
+            case "id":
+                //Building Pet
+                request_Pet = new Pet.Builder(Integer.getInteger(arg1)).build();
+                break;
+            case "name":
+                //Building Pet
+                request_Pet = new Pet.Builder(1001).setName(arg1).build();
+                break;
+            case "status":
+                //Building Pet
+                request_Pet = new Pet.Builder(1001).setStatus(arg1).build();
+                break;
+            case "category":
+                String[] category_arr = arg1.split(", ");
+                int first_param = Integer.parseInt(category_arr[0]);
+                String second_param = category_arr[1];
+                //Building Pet
+                request_Pet = new Pet.Builder(1111).setCategory(new Category(first_param,second_param)).build();
+                break;
+        }
+
+        //Building JSON object
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String JSON = gson.toJson(request_Pet, Pet.class);
+        stepData.request.body(JSON);
     }
 
     @And("^response message contains \"([^\"]*)\"$")
@@ -71,4 +97,6 @@ public class PostApiStepDefinitions {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
+
+
 }

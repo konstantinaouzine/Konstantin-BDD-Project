@@ -1,14 +1,19 @@
 package ApiObjects;
 
 import java.util.ArrayList;
+import java.util.Objects;
+
+import static java.util.Objects.equals;
 
 public class Pet {
-    private final int id;
-    private final String name;
-    private final String status;
-    private final Category category;
-    private final ArrayList<String> photoUrls;
-    private final ArrayList<Tag> tags;
+    private int id;
+    private String name;
+    private String status;
+    private Category category;
+    private ArrayList<String> photoUrls;
+    private ArrayList<Tag> tags;
+
+    private Pet(){}
 
     private Pet(Builder builder){
         this.id = builder.id;
@@ -89,6 +94,20 @@ public class Pet {
     public String getStatus ()
     {
         return status;
+    }
+
+    @Override
+    public boolean equals(Object otherPet){
+        if (otherPet instanceof Pet) {
+            Pet otherPet_2 = (Pet)otherPet;
+            return (this.getId() == otherPet_2.getId() &&
+                            this.getName().equals(otherPet_2.getName()) &&
+                            this.getStatus().equals(otherPet_2.getStatus()) &&
+                            Objects.equals(this.getCategory(), otherPet_2.getCategory()));
+        }
+        else
+            return false;
+
     }
 
     @Override

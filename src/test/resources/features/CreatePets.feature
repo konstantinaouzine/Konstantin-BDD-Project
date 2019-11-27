@@ -32,6 +32,6 @@ Feature: Add Pet using various parameters
     Then operation completed with status code <status_code>
     And response message contains "<message_data>"
     Examples:
-    |field_name|field_value|status_code|message_data          |
-    |id        |Dasha      |500        |something bad happened|
+    |field_name|field_value |status_code|message_data          |
+    |id        |-1          |500        |something bad happened|
 

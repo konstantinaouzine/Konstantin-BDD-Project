@@ -10,8 +10,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-
-import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class PostApiStepDefinitions {
     private StepData stepData;
@@ -50,18 +49,6 @@ public class PostApiStepDefinitions {
         stepData.response = stepData.request.when().post();
     }
 
-    @Then("^operation completed with status code (\\d+)$")
-    public void operationCompletedWithStatusCode(int arg0) throws Throwable {
-        Assert.assertEquals(arg0, stepData.response.getStatusCode());
-    }
-
-    @And("^pet successfully added$")
-    public void petSuccessfullyAdded() throws Throwable {
-        Pet response_Pet = stepData.response.body().as(Pet.class);
-        boolean result = (request_Pet.equals(response_Pet));
-        Assert.assertTrue(result);
-    }
-
     @Given("^a pet with \"([^\"]*)\" set with \"([^\"]*)\"$")
     public void aPetWithSetWith(String arg0, String arg1) throws Throwable {
         switch(arg0){
@@ -92,11 +79,20 @@ public class PostApiStepDefinitions {
         stepData.request.body(JSON);
     }
 
-    @And("^response message contains \"([^\"]*)\"$")
-    public void responseMessageContains(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @Then("^operation completed with status code (\\d+)$")
+    public void operationCompletedWithStatusCode(int arg0) throws Throwable {
+        Assert.assertEquals(arg0, stepData.response.getStatusCode());
     }
 
+    @And("^pet successfully added$")
+    public void petSuccessfullyAdded() throws Throwable {
+        Pet response_Pet = stepData.response.body().as(Pet.class);
+        boolean result = (request_Pet.equals(response_Pet));
+        Assert.assertTrue(result);
+    }
 
+    @And("^response message contains \"([^\"]*)\"$")
+    public void responseMessageContains(String arg0) throws Throwable {
+    stepData.response.then().body("message", equalTo(arg0));
+    }
 }

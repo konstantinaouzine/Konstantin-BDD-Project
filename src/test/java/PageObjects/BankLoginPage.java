@@ -1,11 +1,9 @@
-package pageobjects;
+package PageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import java.time.Duration;
+import Utils.SharedDriver;
 
 
 public class BankLoginPage extends BasePage{
@@ -20,20 +18,14 @@ public class BankLoginPage extends BasePage{
     @FindBy(name = "btnReset")
     private WebElement loginResetButton;
 
-    /*@SuppressWarnings("all")
-    Wait wait = new FluentWait(this.driver)
-            .withTimeout(Duration.ofSeconds(30))
-            .pollingEvery(Duration.ofSeconds(1))
-            .ignoring(NoSuchElementException.class).ignoring(StaleElementReferenceException.class);*/
-
-    public BankLoginPage() {
-        super();
-        PageFactory.initElements(driver, this);
+    public BankLoginPage(SharedDriver sharedDriver) {
+        super(sharedDriver);
+        PageFactory.initElements(sharedDriver, this);
         this.url = "http://demo.guru99.com/V1/index.php";
     }
 
     public void openLoginPage() {
-        driver.get(this.url);
+        sharedDriver.get(this.url);
     }
 
     public void inputUsername(String username) {
@@ -66,7 +58,7 @@ public class BankLoginPage extends BasePage{
     }
 
     public boolean verifyLoggedIn(){
-        return driver.getCurrentUrl().equals("http://demo.guru99.com/V1/html/Managerhomepage.php");
+        return sharedDriver.getCurrentUrl().equals("http://demo.guru99.com/V1/html/Managerhomepage.php");
     }
 
     public boolean verifyOnLoginPage(){
@@ -74,6 +66,6 @@ public class BankLoginPage extends BasePage{
     }
 
     public boolean verifyLogOutButtonShown(){
-        return driver.findElement(By.linkText("Log out")).isDisplayed();
+        return sharedDriver.findElement(By.linkText("Log out")).isDisplayed();
     }
 }

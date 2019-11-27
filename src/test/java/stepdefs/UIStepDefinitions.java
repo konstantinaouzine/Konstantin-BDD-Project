@@ -4,15 +4,20 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pageobjects.BankLoginPage;
 import pageobjects.BasePage;
+import util.SharedDriver;
 
 public class UIStepDefinitions {
 
     private BankLoginPage bankLoginPage;
+    private SharedDriver sharedDriver;
 
-    public UIStepDefinitions(BankLoginPage bankLoginPage) {
+    public UIStepDefinitions(SharedDriver sharedDriver, BankLoginPage bankLoginPage)
+    {
+        this.sharedDriver = sharedDriver;
         this.bankLoginPage = bankLoginPage;
     }
 
@@ -63,18 +68,13 @@ public class UIStepDefinitions {
 
     @Then("^I should get Error screen$")
     public void i_should_get_Error_screen() {
-        System.out.println(BasePage.getDriver().switchTo().alert().getText());
+        System.out.println(sharedDriver.switchTo().alert().getText());
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        BasePage.getDriver().switchTo().alert().dismiss();
-    }
-
-    @And("^I close the browser$")
-    public void i_close_the_browser() {
-        BasePage.getDriver().close();
+        sharedDriver.switchTo().alert().dismiss();
     }
 
 }

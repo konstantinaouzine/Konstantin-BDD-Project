@@ -1,5 +1,6 @@
 package stepdefs;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -25,23 +26,33 @@ public class PostApiStepDefinitions {
     public void petSuccessfullyAdded() {
     }
 
-    @Given("a pet with {string} field")
-    public void aPetWithField(String arg0) {
+    @Given("^a pet with \"([^\"]*)\" field$")
+    public void aPetWithField(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 
-    @Then("pet with <field_response_value> successfully added")
-    public void petWithField_response_valueSuccessfullyAdded() {
+    @Then("^pet with \"([^\"]*)\" successfully added$")
+    public void petWithSuccessfullyAdded(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 
-    @Given("a pet with <field_name> set with <field_value>")
-    public void aPetWithField_nameSetWithField_value() {
+    @Given("^a pet with \"([^\"]*)\" set with \"([^\"]*)\"$")
+    public void aPetWithSetWith(String arg0, String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 
-    @Then("pet adding failed with <status_code>")
-    public void petAddingFailedWithStatus_code() {
+    @Then("^pet adding failed with \"([^\"]*)\"$")
+    public void petAddingFailedWith(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 
-    @And("response message contains <message_data>")
-    public void responseMessageContainsMessage_data() {
+    @And("^response message contains \"([^\"]*)\"$")
+    public void responseMessageContains(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 }

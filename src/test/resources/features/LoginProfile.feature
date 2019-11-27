@@ -1,4 +1,4 @@
-@Ignore
+@LoginProfile
 Feature: Login Profile
   As a bank customer
   I want to login my bank account using my credentials

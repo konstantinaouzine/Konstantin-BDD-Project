@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import PageObjects.BankLoginPage;
 import Utils.SharedDriver;
@@ -62,17 +63,20 @@ public class UIStepDefinitions {
     @And("^I should see the LogOut button$")
     public void i_should_see_the_LogOut_button() {
         Assert.assertTrue(bankLoginPage.verifyLogOutButtonShown());
+        System.out.println("UI Test passed");
     }
 
     @Then("^I should get Error screen$")
     public void i_should_get_Error_screen() {
-        System.out.println(sharedDriver.switchTo().alert().getText());
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        sharedDriver.switchTo().alert().dismiss();
+        Alert currentAlert = sharedDriver.switchTo().alert();
+        Assert.assertEquals("User is not valid", currentAlert.getText());
+        currentAlert.dismiss();
+        System.out.println("UI Test passed");
     }
 
 }

@@ -5,7 +5,6 @@ Feature: Add Pet using various parameters
 
   Background: Protocol configuration applied
     Given URL and headers setup performed
-    Then be happy
 
   Scenario: Success - pet adding using only required fields
     Given a pet with id 1001

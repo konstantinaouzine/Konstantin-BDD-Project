@@ -27,11 +27,6 @@ public class PostApiStepDefinitions {
             .given().basePath("/pet")
             .given().contentType("application/json");
     }
-
-    @Then("^be happy$")
-    public void beHappy() throws Throwable {
-        System.out.println("Background executed");
-    }
 //-----------------------------------------------------------------------------------------------
     @Given("^a pet with id (\\d+)$")
     public void aPetWithId(int arg0) throws Throwable {
@@ -89,6 +84,7 @@ public class PostApiStepDefinitions {
         Pet response_Pet = stepData.response.body().as(Pet.class);
         boolean result = (request_Pet.equals(response_Pet));
         Assert.assertTrue(result);
+        System.out.println("WebService Api test passed");
     }
 
     @And("^response message contains \"([^\"]*)\"$")

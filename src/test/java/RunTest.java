@@ -36,12 +36,7 @@ public class RunTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod() {
-        System.out.println("Method tear down executed");
-        /*try{
-            BasePage.getDriver().close();
-        }catch(Exception e){
-            System.out.println("Driver closure failed");
-        }*/
+
     }
     @AfterClass(alwaysRun = true)
     public void tearDownClass() {

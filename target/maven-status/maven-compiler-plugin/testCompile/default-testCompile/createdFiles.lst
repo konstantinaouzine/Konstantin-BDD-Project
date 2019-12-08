@@ -1,6 +1,9 @@
-stepdefs\StepDefinitions.class
+stepdefs\PostApiStepDefinitions.class
 RunTest.class
+util\SharedDriver$1.class
+util\StepData.class
 util\PicoDependencyInjector.class
+stepdefs\UIStepDefinitions.class
 stepdefs\ServiceHooks.class
 util\SharedDriver.class
 pageobjects\BasePage.class

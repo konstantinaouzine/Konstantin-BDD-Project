@@ -15,6 +15,7 @@ Feature: Login Profile
     Then I am on the MyProfile page on URL "http://demo.guru99.com/V1/html/Managerhomepage.php"
     And I should see the LogOut button
 
+  @Ignore
   Scenario Outline: Failed login using wrong credentials
     Given I stay on login page
     When I fill in "Username" with "<username>"

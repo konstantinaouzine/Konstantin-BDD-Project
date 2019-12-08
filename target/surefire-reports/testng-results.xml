@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[<div "result">I am on the login page (PASSED : 9s)</div>]]>
+      <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
@@ -25,68 +25,17 @@
     <line>
       <![CDATA[<div "result">I should see the LogOut button (PASSED : 0s)</div>]]>
     </line>
-    <line>
-      <![CDATA[<div "result">I close the browser (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I stay on login page (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I fill in &quot;Username&quot; with &quot;mngr233239&quot; (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I fill in &quot;Password&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I click on the LogIn button (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I should get Error screen (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I close the browser (PASSED : 4s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I stay on login page (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I fill in &quot;Username&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I fill in &quot;Password&quot; with &quot;dUhAnAd&quot; (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I click on the LogIn button (PASSED : 0s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I should get Error screen (PASSED : 2s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">I close the browser (PASSED : 4s)</div>]]>
-    </line>
   </reporter-output>
-  <suite name="RunTest" duration-ms="55213" started-at="2019-11-16T20:32:04Z" finished-at="2019-11-16T20:33:00Z">
+  <suite name="RunTest" duration-ms="15017" started-at="2019-11-27T13:48:22Z" finished-at="2019-11-27T13:48:37Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="55213" started-at="2019-11-16T20:32:04Z" finished-at="2019-11-16T20:33:00Z">
+    <test name="Command line test" duration-ms="15017" started-at="2019-11-27T13:48:22Z" finished-at="2019-11-27T13:48:37Z">
       <class name="RunTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunTest@4590c9c3]" name="setUpClass" is-config="true" duration-ms="147" started-at="2019-11-16T20:32:04Z" finished-at="2019-11-16T20:32:05Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunTest@56f4468b]" name="setUpClass" is-config="true" duration-ms="186" started-at="2019-11-27T13:48:22Z" finished-at="2019-11-27T13:48:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunTest@4590c9c3]" name="scenario" duration-ms="15311" started-at="2019-11-16T20:32:05Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-11-16T20:32:20Z">
+        <test-method status="PASS" signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunTest@56f4468b]" name="scenario" duration-ms="14731" started-at="2019-11-27T13:48:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-11-27T13:48:37Z">
           <params>
             <param index="0">
               <value>
@@ -101,7 +50,7 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<div "result">I am on the login page (PASSED : 9s)</div>]]>
+              <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
@@ -124,92 +73,13 @@
             <line>
               <![CDATA[<div "result">I should see the LogOut button (PASSED : 0s)</div>]]>
             </line>
-            <line>
-              <![CDATA[<div "result">I close the browser (PASSED : 0s)</div>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunTest@4590c9c3]" name="scenario" duration-ms="19916" started-at="2019-11-16T20:32:20Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-11-16T20:32:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Failed login using wrong credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Profile"]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:RunTest@56f4468b]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-11-27T13:48:37Z" finished-at="2019-11-27T13:48:37Z">
           <reporter-output>
-            <line>
-              <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I stay on login page (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I fill in &quot;Username&quot; with &quot;mngr233239&quot; (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I fill in &quot;Password&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I click on the LogIn button (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I should get Error screen (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I close the browser (PASSED : 4s)</div>]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunTest@4590c9c3]" name="scenario" duration-ms="19752" started-at="2019-11-16T20:32:40Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-11-16T20:33:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Failed login using wrong credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Profile"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<div "result">I am on the login page (PASSED : 8s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I should see login fields (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I stay on login page (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I fill in &quot;Username&quot; with &quot;Incorrect&quot; (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I fill in &quot;Password&quot; with &quot;dUhAnAd&quot; (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I click on the LogIn button (PASSED : 0s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I should get Error screen (PASSED : 2s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">I close the browser (PASSED : 4s)</div>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunTest@4590c9c3]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2019-11-16T20:33:00Z" finished-at="2019-11-16T20:33:00Z">
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunTest@56f4468b]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2019-11-27T13:48:37Z" finished-at="2019-11-27T13:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
